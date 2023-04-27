@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Order = require("../model/Order");
+const Order = require("../models/Order");
 
 router.get("/test", (req, res) => res.send("Order route testing!"));
 
