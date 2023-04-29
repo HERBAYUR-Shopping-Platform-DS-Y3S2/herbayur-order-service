@@ -1,25 +1,21 @@
 const mongoose = require("mongoose");
 
 const OrderSchema = new mongoose.Schema({
-  oldid: {
+  price: {
     type: String,
     required: true,
   },
-  ItemName: {
+  item_Name: {
     type: String,
     required: true,
   },
-  Itemprice: {
-    type: Number,
-    required: true,
-  },
-  image: {
+  confirmationMail: {
     type: String,
-    required: true,
+    required: false,
   },
-  status: {
+  confirmationDate: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 
