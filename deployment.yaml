@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: herbayur-order-service-deployment
+spec:
+  selector:
+    matchLabels:
+      app: herbayur-order-service-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: herbayur-order-service-app
+    spec:
+      containers:
+      - name: herbayur-order-service-server
+        image: supunhansaka/herbayur-order-service:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5004
