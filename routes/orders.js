@@ -12,7 +12,7 @@ router.get("/:id", (req, res) => {
     .then((item) => res.json(item))
     .catch((err) => res.status(404).json({ noOrderfound: "No Order found" }));
 });
-router.post("/", (req, res) => {
+router.post("/saveOrder", (req, res) => {
   Order.create(req.body)
     .then((item) => res.json({ msg: "Order added successfully" }))
     .catch((err) => res.status(400).json({ error: "Unable to add this item" }));
