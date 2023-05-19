@@ -1,12 +1,8 @@
 const mongoose = require('mongoose');
 
 const orderSchema = new mongoose.Schema({
-  orderId: {
-    type: String,
-    required: true
-  },
   orderDate: {
-    type: Date,
+    type: String,
     required: true
   },
   orderTime: {
@@ -15,17 +11,51 @@ const orderSchema = new mongoose.Schema({
   },
   items: [
     {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'items'
+      name: {
+        type: String,
+        required: true
+      },
+      type: {
+        type: String,
+        required: true
+      },
+      dose: {
+        type: String,
+        required: true
+      },
+      sellerName: {
+        type: String,
+        required: true
+      },
+      price: {
+        type: String,
+        required: true
+      },
+      desc: {
+        type: String,
+        required: true
+      },
+      status: {
+        type: String,
+        required: true
+      },
+      image: {
+        type: String,
+        required: true
+      },
+      quantity: {
+        type: String,
+        required: true
+      },
     }
   ],
-  quantity: {
-    type: Number,
+  totalPrice: {
+    type: String,
     required: true
   },
-  totalPrice: {
-    type: Number,
-    required: true
+  isApproved: {
+    type: Boolean,
+    required : true
   }
 });
 
