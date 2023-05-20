@@ -53,9 +53,10 @@ const orderSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  isApproved: {
-    type: Boolean,
-    required : true
+  orderStatus: {
+    type: String,
+    required : true,
+    default: 'Pending'
   }
 });
 
